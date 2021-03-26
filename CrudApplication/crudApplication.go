@@ -3,9 +3,10 @@ package main
 import(
 "database/sql"
 _ "github.com/go-sql-driver/mysql"
-"log"
+	"html/template"
+	"log"
 "net/http"
-"html/template"
+
 )
 type Employee struct{
 	Id int
@@ -40,7 +41,7 @@ func Insert(w http.ResponseWriter,r *http.Request){
 func Index(w http.ResponseWriter,r *http.Request){
 	db :=dbConn()
 	selDB,err :=db.Query("Select * from Employee")
-	p,_:=template.ParseFiles("C:\\Users\\Gaurav\\sdk\\go1.15beta1\\src\\html\\template\\show.html")
+	p,_:=template.ParseFiles("show.html")
 	if err !=nil{
 		panic(err.Error())
 	}
@@ -64,7 +65,7 @@ func Index(w http.ResponseWriter,r *http.Request){
 
 func New(w http.ResponseWriter, r *http.Request) {
 	News :="RegistrationPage"
-	p,err:=template.ParseFiles("C:\\Users\\Gaurav\\sdk\\go1.15beta1\\src\\html\\template\\new.html")
+	p,err:=template.ParseFiles("neww.html")
 	if err != nil{
 		log.Fatal(err)
 	}
