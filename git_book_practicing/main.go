@@ -1,12 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"log"
-	"net/http"
-	"strings"
-)
-
 type PlayerStore interface {
 	GetPlayerScore(name string) int
 	RecordWin(name string)
@@ -17,7 +10,7 @@ type PlayerServer struct {
 /*func PlayerServer(w http.ResponseWriter,r *http.Request){
 	player :=strings.TrimPrefix(r.URL.Path,"/players")
 	fmt.Fprint(w,GetPlayerScore(player))
-}*/
+}
 
 //server.go
 //server.go
@@ -72,4 +65,4 @@ func (p *PlayerServer) processWin(w http.ResponseWriter) {
 func main() {
 	server := &PlayerServer{&InMemoryPlayerStore{}}
 	log.Fatal(http.ListenAndServe(":5000", server))
-}
+}*/

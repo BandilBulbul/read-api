@@ -1,4 +1,5 @@
-package main
+package  main
+/* package main
 
 type Shape interface{
 	area() float64
@@ -27,7 +28,7 @@ func (m *MultiShape) Perimeter() float64{
 }
 
 func main(){
-	var rect=new(MultiShape)
+	//var rect=new(MultiShape)
 
 
-}
+}*/
