@@ -29,6 +29,5 @@ func main(){
 		fmt.Println(err)
 	}
 	fmt.Println(string(byteArray))
-
 }
 

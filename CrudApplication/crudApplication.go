@@ -41,7 +41,7 @@ func Insert(w http.ResponseWriter,r *http.Request){
 func Index(w http.ResponseWriter,r *http.Request){
 	db :=dbConn()
 	selDB,err :=db.Query("Select * from Employee")
-	p,_:=template.ParseFiles("show.html")
+	p,_:=template.ParseFiles("C:\\Users\\Gaurav\\githubProject\\read-api\\CrudApplication\\src\\html\\template\\show.html")
 	if err !=nil{
 		panic(err.Error())
 	}
@@ -65,7 +65,7 @@ func Index(w http.ResponseWriter,r *http.Request){
 
 func New(w http.ResponseWriter, r *http.Request) {
 	News :="RegistrationPage"
-	p,err:=template.ParseFiles("neww.html")
+	p,err:=template.ParseFiles("C:\\Users\\Gaurav\\githubProject\\read-api\\CrudApplication\\src\\html\\template\\neww.html")
 	if err != nil{
 		log.Fatal(err)
 	}
