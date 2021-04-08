@@ -1,9 +1,10 @@
-package  main
-/* package main
+package main
+
+import "fmt"
 
 type Shape interface{
 	area() float64
-	perimeter() float64
+	//perimeter() float64
 }
 
 type MultiShape struct{
@@ -19,16 +20,20 @@ func (m *MultiShape) area() float64{
 	return area
 }
 
-func (m *MultiShape) Perimeter() float64{
-	var perimeter float64
-	for _,s:=range m.shapes{
-		perimeter +=m.Perimeter()
+func totalArea(shapes ...Shape) float64 {
+	var area float64
+	for _, s := range shapes {
+		area += s.area()
 	}
-	return perimeter
+
+	return area
 }
 
 func main(){
-	//var rect=new(MultiShape)
+	var areValues=MultiShape
+	//fmt.Println(totalArea(&c, &r))
+	fmt.Println(areValues)
 
 
-}*/
+
+}

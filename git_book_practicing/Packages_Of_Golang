@@ -1,0 +1,39 @@
+PACKAGES:
+1.FILE I/O:
+    a.(os.file) objects are used for file manipulations. (os.File) objects are also called filehandles.
+    b.open function which is in os package is used to open files in Go
+    c.ReadFile() in the io/ioutil package is used to read the file.This method returns []byte array of read bytes.
+    d.file.WriteString method can be used to write to the file.
+    e.defer file.close() right after opening the file to make sure that the file is closed
+       as soon as the function completes.
+    f.inputFile, inputError = os.Open("input.dat") results in an error.
+       (If a file does not exists or the program has not the sufficient rights to open the file then)
+    Example:
+    package main
+    import (
+       "os"
+       "log"
+       "io/ioutil"
+       "fmt"
+    )
+    func main() {
+       file, err := os.Create("file.txt")
+       if err != nil {
+          log.Fatal(err)
+       }
+       file.WriteString("Hi... there")
+       file.Close()
+       stream, err:= ioutil.ReadFile("file.txt")
+       if err != nil {
+          log.Fatal(err)
+       }
+       readString := string(stream)
+       fmt.Println(readString)
+    }
+
+2.Http Packages:
+    a.Net/http is a library package used to build web applications
+    b.HandelFunc() function which routes the incoming request to its corresponding function.
+    c.The ListenAndServe function is used to create a resource server which listens to the provided port.
+    d.http.ResponceWriter and http.Request type parameter.
+        It is responsible to take the incoming request and after processing the return response.
