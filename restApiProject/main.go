@@ -110,4 +110,5 @@ func main(){
 	//get()
 	//post()
 	put()
+	delete()
 }
