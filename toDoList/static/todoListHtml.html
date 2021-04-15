@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>TO DO List APP</title>
+</head>
+<body>
+<script>
+    var indexs = 1;
+    function toDoFunction(){
+        let values;
+        values=document.getElementById("list").value;
+        var x=document.getElementById("tableList").insertRow(indexs);
+        var y=x.insertCell(0);
+        var z=x.insertCell(1);
+        z.innerHTML=values;
+        y.innerHTML =indexs;
+        indexs +=1;
+    }
+</script>
+<form>
+    <div>`
+        <h2 align="center">To Do List App</h2>
+
+        <div align="center">
+            <input type="text" id="list"  placeholder="Make a List">
+            <input type="button" value="Add" onclick="toDoFunction()"></br>
+        </div>
+
+    <div id="makeList" align="center">
+        <table border="1" id="tableList"></br>
+            <tr>
+                <td>sno</td>
+                <td>Items</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</form>
+</body>
+</html>

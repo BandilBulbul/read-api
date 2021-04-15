@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .myDiv {
+            border: 5px outset red;
+            background-color: lightblue;
+            text-align: center;
+        }
+        table.center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<div class="myDiv">
+<h2> Registered </h2>
+<table border="1"  class="center">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>City</td>
+       <!--  <td>View</td>
+        <td>Edit</td>-->
+        <td>Delete</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range . }}
+    <tr>
+        <td>{{ .Id }}</td>
+        <td> {{ .Name }} </td>
+        <td>{{ .City }} </td>
+        <!--<td><a href="/show?id={{ .Id }}">View</a></td>
+        <td><a href="/edit?id={{ .Id }}">Edit</a></td>-->
+        <td><a href="/delete?id={{ .Id }}">Delete</a></td>
+    </tr>
+    {{ end }}
+    </tbody>
+</table>
+</div>
+</body>
+</html>
+
