@@ -1,0 +1,7 @@
+### Refactor 
+
+1. Refactor the code  as a varible , constant, function should be having single functionality.
+1. refactor, backed with the safety of our tests to ensure we have well-crafted code that is easy to work with
+1. refactor the testing code as a well crafted , should not be duplication code 
+1. clean and clear code (good readability)
+1. each contains its own functionlity
